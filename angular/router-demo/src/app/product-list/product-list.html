@@ -1,0 +1,21 @@
+<div class="">
+    <h2 class="container my-3">Product List</h2>
+    @for (product of products; track product.id) {
+        <!-- 
+            p-3 = padding and space inside the div
+            bg-light = add ligth background color in the div
+            my-3 = add space up and down between div
+        -->
+        <div class="card p-4 m-4 bg-light mx-3" >
+            <img [src]="product.image" [alt]="product.title" style="width: 200px; margin: 10px auto;">
+            <h4>{{product.title}}</h4>
+            <p>{{product.price | currency: 'USD'}}</p>
+
+            <!-- 
+                btn = add button style
+                btn-primary = color primary
+            -->
+            <a [routerLink]="['products', product.id]" class="btn btn-primary">View Product</a>
+        </div>
+    }
+</div>

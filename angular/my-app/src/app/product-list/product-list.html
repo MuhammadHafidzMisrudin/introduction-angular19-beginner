@@ -1,0 +1,13 @@
+<app-create-product (addNewProduct)="onAddNewProduct($event)"></app-create-product>
+
+@if (products.length === 0) {
+<p> No product items left </p>
+} @else {
+<ul>
+    @for (product of products; track product.id) {
+        <!-- [xxx] property binding -->
+        <li><app-product-item [currentProduct]="product" (deleteItem)="onDeleteProduct($event)"></app-product-item></li>
+    }
+</ul>
+}
+

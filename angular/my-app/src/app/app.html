@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<h1>Hello World</h1>
+<p>Welcome to my first Angular website</p>
+
+<hr>
+<p>Name: {{name}}</p>
+<p>Age: {{age}}</p>
+<p>Location: {{age}}</p>
+<p>Is developer: {{developer}}</p>
+
+@if (developer) {
+<p>{{name}} IS a Developer</p>
+} @else {
+<p>{{name}} IS NOT a Developer</p>
+}
+<hr>
+
+<p>scores: {{scores}}</p>
+<ul>
+  @for (score of scores; track $index) {
+  <li>[{{$index}}] {{score}}</li>
+  }
+</ul>
+<hr>
+
+<h2>Counters</h2>
+<!-- pass data from parent to child Component -->
+ <!-- [xxx] property binding -->
+<app-counter [max]="50" [min]="-5" [initialVal]="20" [counterName]="'Counter 50'"></app-counter>
+<app-counter [max]="25" [min]="-25" [initialVal]="2" [counterName]="'Funny Counter'"></app-counter>
+<app-counter ></app-counter>
+
+<hr>
+<h2>Product Info</h2>
+<app-product-list></app-product-list>
+<app-footer></app-footer>

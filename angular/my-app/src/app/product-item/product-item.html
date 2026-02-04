@@ -1,0 +1,6 @@
+<div>
+    <h4>{{currentProduct.id}}</h4>
+     <h4>{{currentProduct.name | uppercase}} </h4> <!-- use uppercase pipe -->
+    <h4>{{currentProduct.price | currency: 'MYR'}}</h4> <!--  -->
+    <button (click)="deleteItemPressed()">Remove</button>
+</div>

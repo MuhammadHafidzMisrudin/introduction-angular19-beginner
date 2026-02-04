@@ -1,0 +1,6 @@
+<h4>Add New Product</h4>
+<!-- [()] 2 way data binding -->
+<input type="text" placeholder="Add product name" name="name" [(ngModel)]="name">
+<input type="number" placeholder="Add Product Price" name="price" [(ngModel)]="price">
+<!-- () event binding -->
+<button (click)="addProduct()" [disabled]="name==='' || price<=0">Add</button>

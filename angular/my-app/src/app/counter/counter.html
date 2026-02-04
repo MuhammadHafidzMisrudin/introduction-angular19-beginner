@@ -1,0 +1,18 @@
+<div class="counter-section">
+    <h2>{{counterName}}</h2>
+    <h4>{{countValue}}</h4>
+
+    <!-- event binding with function -->
+      <!-- property binding with function -->
+    @if (countValue === min) {
+        <p class="text-danger">Number cannot be less than {{min}}</p>
+    }
+    @if (countValue === max) {
+        <p class="text-danger">Number cannot be more than {{max}}</p>
+    }
+    <button (click)="incrementValue()" [disabled]="countValue===max">Increment</button>
+    <button (click)="decrementValue()" [disabled]="countValue===min">Decrement</button>
+    <button (click)="resetValue()">Reset</button>
+
+
+</div>
